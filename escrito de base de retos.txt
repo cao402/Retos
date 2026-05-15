@@ -1,7 +1,6 @@
 tabla cliente:
-id: primary key (int automatico)
 nombre: not null (varchar (20))
-correo:  not null (varchar (35)/ UN)
+correo: primary key not null (varchar (35)/ UN)
 teléfono: not null (varchar (9))
 
 tabla ticket:
@@ -15,9 +14,8 @@ prioridad: not null (el dato de opción en "Baja", "Media", "Alta" o "Critica")
 Estados: not null (el dato de opción en "Abierto", "Proceso", "Cerrado" o "Archivado")
 
 tabla operador:
-id: primary key (int automatico)
 nombre: not null (varchart (20))
-correo:  not null (varchart (35)/ UN)
+correo: primary key not null (varchart (35)/ UN)
 teléfono: not null (varchart (9))
 departamentos_nivel: not null (el dato de opción en "nivel 1", "nivel 2" o "Administrador" (pequeño detalla en realidad pone etc))
 
