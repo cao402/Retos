@@ -1,0 +1,39 @@
+tabla cliente:
+id: primary key (int automatico)
+nombre: not null (varchar (20))
+correo:  not null (varchar (35)/ UN)
+teléfono: not null (varchar (9))
+
+tabla ticket:
+id: primary key (int automatico)
+titulo: not null (varchar (15))
+descripción: not null (varchar (100)
+fecha y hora: not null (date/time)
+fecha de cierre: null (date)
+categoría: not null (el dato de opciones en "Hardware", "Software", "Redes" o "Seguridad")
+prioridad: not null (el dato de opción en "Baja", "Media", "Alta" o "Critica")
+Estados: not null (el dato de opción en "Abierto", "Proceso", "Cerrado" o "Archivado")
+
+tabla operador:
+id: primary key (int automatico)
+nombre: not null (varchart (20))
+correo:  not null (varchart (35)/ UN)
+teléfono: not null (varchart (9))
+departamentos_nivel: not null (el dato de opción en "nivel 1", "nivel 2" o "Administrador" (pequeño detalla en realidad pone etc))
+
+tabla departamento:
+nombre: primary key (varchar (20))
+ubicacion: not null (varchar (20))
+
+tabla mensaje:
+id: primary key (int automatico)
+texto: not null (varchar (100))
+fecha y hora: not null (date/time)
+id_del_enviador (foring key int)
+
+
+
+1 cliente - n tickets/ 1 tickets - 1 cliente
+1 departamento - n operador / 1 operador - 1 departamento
+1 operador - n tickets / 1 tickets - 1 operador
+(creo y solo creo que la tabla mensaje es un n-n de cliente y operador)
