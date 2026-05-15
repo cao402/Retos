@@ -27,11 +27,12 @@ tabla mensaje:
 id: primary key (int automatico)
 texto: not null (varchar (100))
 fecha y hora: not null (date/time)
-id_del_enviador (foring key int)
 
 
 
 1 cliente - n tickets/ 1 tickets - 1 cliente
 1 departamento - n operador / 1 operador - 1 departamento
 1 operador - n tickets / 1 tickets - 1 operador
-(creo y solo creo que la tabla mensaje es un n-n de cliente y operador)
+1 mensaje - 1 cliente / 1 cliente - n mensajes
+1 mensaje - 1 operador / 1 operador - n mensajes
+1 mensaje - 1 ticket / 1 ticket - n mensajes
