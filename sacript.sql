@@ -45,7 +45,7 @@ DEFAULT CHARACTER SET = utf8mb3;
 -- -----------------------------------------------------
 -- Table `mydb`.`operador`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`operador` (
+CREATE TABLE IF NOT EXISTS `mydb`.`operadores` (
   `id_operador` INT NOT NULL AUTO_INCREMENT,
   `correo_operador` VARCHAR(35) NOT NULL,
   `nombre` VARCHAR(50) NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`ticket` (
     REFERENCES `mydb`.`clientes` (`ID_cliente`),
   CONSTRAINT `ticket_ibfk_2`
     FOREIGN KEY (`operador`)
-    REFERENCES `mydb`.`operador` (`id_operador`))
+    REFERENCES `mydb`.`operadores` (`id_operador`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
 
